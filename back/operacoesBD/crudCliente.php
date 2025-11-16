@@ -1,7 +1,7 @@
 <?php 
     require_once "conexaoBD.php";
 
-    class BD{
+    class crudCliente{
         //$con sera usada para armazenar a conexao com o banco de dados
         private $con;
 
@@ -15,21 +15,23 @@
 
         public function insertCliente($id,$nome,$email,$senha){
           
+            try{
+                $query = "insert into clientes (id_cliente,nome,email,senha) values (:id,:nome,:email,:senha)";
 
-            $query = "insert into cliente (id_cliente,nome,email,senha) values (:id,:nome,:email,:senha)";
+                $stmt = $this->con->prepare($query);
+                $stmt->bindParam(":id",$id);
+                $stmt->bindParam(":nome",$nome);
+                $stmt->bindParam(":email",$email);
+                $stmt->bindParam(":senha",$senha);
 
-            $stmt = $this->con->prepare($query);
-            $stmt->bindParam(":id",$id);
-            $stmt->bindParam(":nome",$nome);
-            $stmt->bindParam(":email",$email);
-            $stmt->bindParam(":senha",$senha);
-
-            $stmt->execute();
-
+                $stmt->execute();
+            }catch(PDOException $e){
+                echo "Nao foi possivel inserir os dados". $e->getMessage();
+            }
         }
 
         public function readCliente($id){
-            $query = "select * from cliente where id_cliente == :id";
+            $query = "select id_cliente,nome,email from clientes where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id", $id);
@@ -37,10 +39,12 @@
 
             //Dados do cliente buscado sao armazenados aqui
             $cliente = $stmt->fetch();
+            
+            return $cliente;
         }
 
         public function updateCliente($id,$nome,$email,$senha){
-            $query = "update from cliente set nome = :nome,email = :email, senha = :senha where id_cliente = :id";
+            $query = "update clientes set nome = :nome,email = :email, senha = :senha where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id",$id);
@@ -52,7 +56,7 @@
         }
 
         public function deleteCliente($id){
-            $query = "delete from cliente where id_cliente = :id";
+            $query = "delete from clientes where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id", $id);
