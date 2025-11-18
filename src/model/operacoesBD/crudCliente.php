@@ -43,8 +43,32 @@
             return $cliente;
         }
 
-        public function updateCliente($id,$nome,$email,$senha){
-            $query = "update clientes set nome = :nome,email = :email, senha = :senha where id_cliente = :id";
+        public function updateNome($id,$nome){
+            $query = "update clientes set nome = :nome where id_cliente = :id";
+
+            $stmt = $this->con->prepare($query);
+            $stmt->bindParam(":id",$id);
+            $stmt->bindParam(":nome",$nome);
+            $stmt->bindParam(":email",$email);
+            $stmt->bindParam(":senha",$senha);
+
+            $stmt->execute();
+        }
+
+        public function updateEmail($id,$email){
+            $query = "update clientes set email = :email, where id_cliente = :id";
+
+            $stmt = $this->con->prepare($query);
+            $stmt->bindParam(":id",$id);
+            $stmt->bindParam(":nome",$nome);
+            $stmt->bindParam(":email",$email);
+            $stmt->bindParam(":senha",$senha);
+
+            $stmt->execute();
+        }
+
+        public function updateSenha($id,$senha){
+            $query = "update clientes set senha = :senha where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id",$id);
