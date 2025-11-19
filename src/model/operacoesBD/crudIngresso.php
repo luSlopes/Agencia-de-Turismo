@@ -36,6 +36,7 @@
             $stmt->execute();
 
             $ingresso = $stmt->fetch();
+            return $ingresso;
         }
 
         public function readIngressoPorCliente($id_usuario){
