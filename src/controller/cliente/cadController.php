@@ -1,5 +1,5 @@
 <?php 
-    require_once"../model/operacoesBD/crudCliente.php";
+    require_once "../../model/operacoesBD/crudCliente.php";
 
     $id = $_POST["cpf"];
     $nome = $_POST["nome"];

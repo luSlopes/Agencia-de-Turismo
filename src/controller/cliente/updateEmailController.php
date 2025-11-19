@@ -1,5 +1,5 @@
 <?php 
-    require_once "../model/operacoesBD/crudCliente.php";
+    require_once "../../model/operacoesBD/crudCliente.php";
 
     $bd = new crudCliente();
 

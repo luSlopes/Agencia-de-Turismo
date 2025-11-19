@@ -1,5 +1,5 @@
 <?php 
-    require_once "./../../model/operacoesBD/crudIngresso.php";
+    require_once "./../../model/operacoesBD/crudTour.php";
     
     $bd = new CrudTour();
 
