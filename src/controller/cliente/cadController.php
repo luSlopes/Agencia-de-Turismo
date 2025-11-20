@@ -31,7 +31,7 @@
     $bd->insertCliente($id, $nome, $email, $senha);
 
     echo "<p>Cadastro realizado com sucesso!</p><br>";
-    echo '<a href="./../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
+    echo '<a href="../../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
 ?>
 </body>
 </html>
