@@ -1,0 +1,46 @@
+:root {
+  --primary: #0ed0e1;
+  --secondary: #83c5be;
+  --light: #edf6f9;
+  --dark: #2b2d42;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--light);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Playfair Display", serif;
+  color: var(--primary);
+}
+
+.navbar {
+  background: rgba(0, 109, 119, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../imagens/praia.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  background: var(--dark);
+  color: white;
+}
