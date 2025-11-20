@@ -1,4 +1,24 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+    />
+    <style>
+        p{
+            font-size: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <?php 
     require_once "../../model/operacoesBD/crudCliente.php";
 
     $id = $_POST["cpf"];
@@ -9,4 +29,9 @@
     $bd = new crudCliente();
 
     $bd->insertCliente($id, $nome, $email, $senha);
+
+    echo "<p>Cadastro realizado com sucesso!</p><br>";
+    echo '<a href="./../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
 ?>
+</body>
+</html>

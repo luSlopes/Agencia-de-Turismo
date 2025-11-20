@@ -11,8 +11,6 @@
             try{
                 $con = new PDO("mysql:host=$this->host;dbname=$this->bd",$this->user,$this->senha);
 
-                echo "Conectado!";
-
                 return $con;
             }catch(PDOException $e){
                 echo "Erro de conexao ao banco de dados<br>";
@@ -20,7 +18,4 @@
             }
         }
     }
-
-
-
 ?>
