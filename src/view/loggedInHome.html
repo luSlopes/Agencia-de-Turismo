@@ -1,3 +1,7 @@
+<?php
+ $user_cpf = isset($_POST['cpf'])? $_POST['cpf']: '';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -50,7 +54,9 @@
               <a class="nav-link" href="index.html#pacotes">Pacotes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="perfil.html">Meu perfil</a>
+              <a class="nav-link" href="perfil.html?cpf=<?php echo $user_cpf;>"
+                >Meu perfil</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="consulta.html">Minhas reservas</a>
@@ -198,7 +204,7 @@
               <li><a href="pacotes.html" class="text-white">Pacotes</a></li>
               <li><a href="cadastro.html" class="text-white">Cadastro</a></li>
               <li>
-                <a href="consulta.php" class="text-white">Minhas Reservas</a>
+                <a href="consulta.html" class="text-white">Minhas Reservas</a>
               </li>
             </ul>
           </div>

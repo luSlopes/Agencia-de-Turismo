@@ -33,7 +33,7 @@
             $user_senha = $user["senha"];
 
             if($user_cpf == $cpf && $user_senha == $senha){
-                echo "<script>window.location.href = ../../view/loggedInHome.html</script>";
+                echo "<script>window.location.href = ../../view/loggedInHome.html?cpf=$user_cpf</script>";
             }
             else{
                 echo "<p>Nao foi possivel se conectar, verifique as informacoes e tente novamente</p>";
