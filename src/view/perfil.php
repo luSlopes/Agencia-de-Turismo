@@ -1,11 +1,12 @@
 <?php
-    require_once "../model/operacoesBD/crudCliente.php";
+    require "../model/operacoesBD/crudCliente.php";
 
-    $user_cpf = $_GET['cpf']? $_GET['cpf'] : '';
+    $user_cpf = isset($_GET['cpf'])? $_GET['cpf'] : '';
     $search = new crudCliente();
     $result = $search->readCliente($user_cpf); 
     $user_name = $result['nome']; 
     $user_email = $result['email']; 
+
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +41,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="loggedInHome.html#home">Home</a>
+              <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+              <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="loggedInHome.html#pacotes">Pacotes</a>
+              <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">Meu perfil</a>

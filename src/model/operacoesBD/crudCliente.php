@@ -24,6 +24,7 @@
                 $stmt->bindParam(":senha",$senha);
 
                 $stmt->execute();
+                return 1;
             }catch(PDOException $e){
                 echo "Nao foi possivel inserir os dados". $e->getMessage();
             }

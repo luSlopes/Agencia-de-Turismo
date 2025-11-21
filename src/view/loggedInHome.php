@@ -1,5 +1,5 @@
 <?php
- $user_cpf = isset($_POST['cpf'])? $_POST['cpf']: '';
+ $user_cpf = $_GET['cpf']? $_GET['cpf']: '';
 ?>
 
 <!DOCTYPE html>
@@ -45,17 +45,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html#home">Home</a>
+              <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#home?">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+              <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html#pacotes">Pacotes</a>
+              <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="perfil.php?cpf=<?php $user_cpf=$_GET['cpf'];echo $user_cpf;?>"
-                >Meu perfil</a
+              <a class="nav-link" href="perfil.php?cpf=<?php echo $user_cpf;?>">Meu perfil</a
               >
             </li>
             <li class="nav-item">

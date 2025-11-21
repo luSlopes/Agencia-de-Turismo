@@ -24,15 +24,14 @@
             $bd = new crudCliente();
             
             //componentes de login
-            $cpf = $_GET["cpf"];
-            $senha = $_GET["senha"];
+            $cpf = $_POST["cpf"];
+            $senha = $_POST["senha"];
 
             //busca cliente no bd
             $user = $bd->readCliente($cpf);
             $user_cpf = $user["id_cliente"];
-            $user_senha = $user["senha"];
-
-            if($user_cpf == $cpf && $user_senha == $senha){
+            
+            if($user_cpf == $cpf && password_verify($senha,$user["senha"])){
                 header("Location: ../../view/loggedInHome.php?cpf=$cpf");
             }
             else{
