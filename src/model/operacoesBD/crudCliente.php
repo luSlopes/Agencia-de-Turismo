@@ -30,7 +30,7 @@
         }
 
         public function readCliente($id){
-            $query = "select id_cliente,nome,email from clientes where id_cliente = :id";
+            $query = "select * from clientes where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id", $id);

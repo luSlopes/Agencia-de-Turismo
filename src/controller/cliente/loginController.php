@@ -24,8 +24,8 @@
             $bd = new crudCliente();
             
             //componentes de login
-            $cpf = $_POST["cpf"];
-            $senha = $_POST["senha"];
+            $cpf = $_GET["cpf"];
+            $senha = $_GET["senha"];
 
             //busca cliente no bd
             $user = $bd->readCliente($cpf);
@@ -33,7 +33,7 @@
             $user_senha = $user["senha"];
 
             if($user_cpf == $cpf && $user_senha == $senha){
-                echo "<script>window.location.href = ../../view/loggedInHome.html?cpf=$user_cpf</script>";
+                header("Location: ../../view/loggedInHome.php?cpf=$cpf");
             }
             else{
                 echo "<p>Nao foi possivel se conectar, verifique as informacoes e tente novamente</p>";

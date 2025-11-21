@@ -54,7 +54,7 @@
               <a class="nav-link" href="index.html#pacotes">Pacotes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="perfil.html?cpf=<?php echo $user_cpf;>"
+              <a class="nav-link" href="perfil.php?cpf=<?php $user_cpf=$_GET['cpf'];echo $user_cpf;?>"
                 >Meu perfil</a
               >
             </li>

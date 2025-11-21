@@ -1,9 +1,12 @@
 <?php
-    require_once "../model/crudCliente.php";
+    require_once "../model/operacoesBD/crudCliente.php";
 
-    $user_cpf = isset($_POST('cpf'))? $_POST['cpf'] : '';
+    $user_cpf = $_GET['cpf']? $_GET['cpf'] : '';
     $search = new crudCliente();
-    $search->readCliente($user_cpf); $user_name = $search['nome']; $user_email =$search['email']; ?>
+    $result = $search->readCliente($user_cpf); 
+    $user_name = $result['nome']; 
+    $user_email = $result['email']; 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
