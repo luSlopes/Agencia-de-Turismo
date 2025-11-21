@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +28,10 @@
 
     $bd = new crudCliente();
 
-    $bd->insertCliente($id, $nome, $email, $senha);
+    if($bd->insertCliente($id, $nome, $email, $senha)==1){
+        echo "<p>Cadastro realizado com sucesso!</p><br>";  
+    }
 
-    echo "<p>Cadastro realizado com sucesso!</p><br>";
     echo '<a href="../../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
 ?>
 </body>

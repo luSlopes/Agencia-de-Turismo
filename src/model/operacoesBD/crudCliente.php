@@ -14,7 +14,6 @@
         }
 
         public function insertCliente($id,$nome,$email,$senha){
-          
             try{
                 $query = "insert into clientes (id_cliente,nome,email,senha) values (:id,:nome,:email,:senha)";
 
