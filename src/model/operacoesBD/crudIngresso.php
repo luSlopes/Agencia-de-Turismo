@@ -21,11 +21,15 @@
         }
 
         public function deleteIngresso($codigo){
-            $query = "delete from ingressos where codigo = :codigo";
+            try{$query = "delete from ingressos where codigo = :codigo";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":codigo", $codigo);
             $stmt->execute();
+            return 1;
+            }catch(PDOException $e){
+                echo $e->getMessage();
+            }
         }
 
         public function readIngresso($codigo){
