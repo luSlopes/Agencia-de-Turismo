@@ -52,6 +52,12 @@
             <li class="nav-item">
               <a class="nav-link" href="">Meu perfil</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="minhasReservas.php?cpf=<?php echo $user_cpf;?>">Minhas reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-danger" href="index.html">Logout</a>
+            </li>
           </ul>
         </div>
       </div>

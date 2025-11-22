@@ -54,6 +54,9 @@
             <li class="nav-item">
               <a class="nav-link" href="">Minhas reservas</a>
             </li>
+            <li class="nav-item">
+              <a class="btn btn-danger" href="index.html">Logout</a>
+            </li>
           </ul>
         </div>
       </div>
