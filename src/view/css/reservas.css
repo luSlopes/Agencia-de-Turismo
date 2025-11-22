@@ -1,0 +1,22 @@
+div.info {
+  width: 400px;
+  margin-top: 30px;
+  margin-left: 530px;
+  border: 2px solid;
+  border-radius: 20px;
+}
+
+div.title {
+  margin-top: 100px;
+  width: 400px;
+}
+
+h1.titleFont {
+  font-family: sans-serif;
+  color: black;
+  font-size: 40px;
+}
+
+btn {
+  margin-left: 50px;
+}

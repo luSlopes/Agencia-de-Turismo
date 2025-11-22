@@ -1,6 +1,6 @@
 <?php 
     require_once "conexaoBD.php";
-    class CrudTour{
+    class crudTour{
         private $con;
 
         public function __construct(){

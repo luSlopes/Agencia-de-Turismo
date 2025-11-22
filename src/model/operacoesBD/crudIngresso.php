@@ -1,6 +1,6 @@
 <?php 
     require_once "conexaoBD.php";
-    class CrudIngresso{
+    class crudIngresso{
         private $con;
 
         public function __construct(){
@@ -39,14 +39,16 @@
             return $ingresso;
         }
 
-        public function readIngressoPorCliente($id_usuario){
-            $query = "select * from ingressos where id_usuario = :id_usuario";
+        public function readIngressoPorCliente($cpf){
+            $query = "select * from ingressos where id_cliente = :cpf";
 
             $stmt = $this->con->prepare($query);
-            $stmt->bindParam(":id_usuario", $id_usuario);
+            $stmt->bindParam(":cpf", $cpf);
             $stmt->execute();
 
             $ingresso = $stmt->fetchAll();
+
+            return $ingresso;
     }
     }
 

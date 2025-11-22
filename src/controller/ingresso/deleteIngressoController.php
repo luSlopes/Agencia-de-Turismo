@@ -3,7 +3,7 @@
     
     $bd = new CrudIngresso();
 
-    $id = $_POST["idIngresso"];
+    $id = $_GET["idIngresso"];
 
     $bd->deleteIngresso($id);
 ?>

@@ -58,7 +58,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="consulta.html">Minhas reservas</a>
+              <a class="nav-link" href="minhasReservas.php">Minhas reservas</a>
             </li>
           </ul>
         </div>
