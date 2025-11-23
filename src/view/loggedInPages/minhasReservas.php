@@ -1,9 +1,9 @@
 <?php
-    require_once"../model/operacoesBD/crudIngresso.php";
-    require_once"../model/operacoesBD/readTour.php";
+    require_once"../../model/operacoesBD/crudIngresso.php";
+    require_once"../../model/operacoesBD/readTour.php";
     $bdIngresso = new crudIngresso();
     $bdTour = new crudTour();
-    
+
     $user_cpf = isset($_GET['cpf'])?$_GET['cpf']:'';
     //Busca todos os ingressos do cliente
     $ingressos = $bdIngresso->readIngressoPorCliente($user_cpf);
@@ -18,8 +18,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Minhas reservas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/minhasReservas.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/minhasReservas.css">
   </head>
   <body>
 
@@ -42,7 +46,7 @@
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#home?">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
+              <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
@@ -55,7 +59,7 @@
               <a class="nav-link" href="">Minhas reservas</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-danger" href="index.html">Logout</a>
+              <a class="btn btn-danger" href="../index.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -79,7 +83,8 @@
     <?php 
         foreach($ingressos as $ingressoInfo){
             $ingressoId = $ingressoInfo['codigo']; // codigo do ingresso
-            $ingressoData = $ingressoInfo['dia']; // data do ingresso
+            $ingressoData = new DateTime($ingressoInfo['dia']); // carrega a data para um objeto do tipo DateTime
+            $ingressoData = $ingressoData->format('d/M/Y');
 
             $tour_id = $ingressoInfo['id_tour'];
             $tourInfo = $bdTour->readTour($tour_id);
@@ -91,7 +96,7 @@
                 <td>$ingressoId</td>
                 <td>$ingressoData</td>
                 <td>$tourName</td>
-                <td><a class='btn btn-danger' href='../controller/ingresso/deleteIngressoController.php?idIngresso=$ingressoId&cpf=$user_cpf'>Cancelar</a></td>
+                <td><a class='btn btn-danger' href='../../controller/ingresso/deleteIngressoController.php?idIngresso=$ingressoId&cpf=$user_cpf'>Cancelar</a></td>
                 </tr>
                 ";
         }

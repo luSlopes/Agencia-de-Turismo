@@ -25,13 +25,13 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">
+        <a class="navbar-brand fw-bold" href="">
           <i class="bi bi-water me-2"></i>Rildax Tour
         </a>
         <button
@@ -48,7 +48,7 @@
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#home?">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
+              <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
@@ -61,7 +61,7 @@
               <a class="nav-link" href="minhasReservas.php?cpf=<?php echo $user_cpf;?>">Minhas reservas</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-danger" href="index.html">Logout</a>
+              <a class="btn btn-danger" href="../index.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -130,7 +130,7 @@
           <div class="col-md-4">
             <div class="card border-0 shadow">
               <img
-                src="imagens/costa-azul.jpg"
+                src="../imagens/costa-azul.jpg"
                 class="card-img-top"
                 alt="Praia do Costa Azul"
               />
@@ -149,7 +149,7 @@
           <div class="col-md-4">
             <div class="card border-0 shadow">
               <img
-                src="imagens/escuna.jpg"
+                src="../imagens/escuna.jpg"
                 class="card-img-top"
                 alt="Passeio de barco"
               />
@@ -169,7 +169,7 @@
           <div class="col-md-4">
             <div class="card border-0 shadow">
               <img
-                src="imagens/baleia.jpg"
+                src="../imagens/baleia.jpg"
                 class="card-img-top"
                 alt="City tour"
               />

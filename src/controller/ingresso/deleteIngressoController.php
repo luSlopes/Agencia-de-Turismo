@@ -26,7 +26,7 @@
 
     if($bd->deleteIngresso($id) == 1){
         echo "<p class = 'success'>Reserva cancelada!</p>";
-        header("Location: ../../view/minhasReservas.php?cpf=$user_cpf");
+        header("Location: ../../view/loggedInPages/minhasReservas.php?cpf=$user_cpf");
     }else{
         echo "<p class = 'failed'>Nao foi possivel cancelar a reserva!</p>";
         echo "<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";

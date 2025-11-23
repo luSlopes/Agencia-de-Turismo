@@ -1,5 +1,5 @@
 <?php
-    require "../model/operacoesBD/crudCliente.php";
+    require "../../model/operacoesBD/crudCliente.php";
 
     $user_cpf = isset($_GET['cpf'])? $_GET['cpf'] : '';
     $search = new crudCliente();
@@ -24,14 +24,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/perfil.css" >
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/perfil.css" >
     <title>Meu perfil</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">
+        <a class="navbar-brand fw-bold" href="loggedInHome.php?cpf=<?php echo $user_cpf?>">
           <i class="bi bi-water me-2"></i>Rildax Tour
         </a>
         <button
@@ -48,7 +48,7 @@
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
+              <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
@@ -60,7 +60,7 @@
               <a class="nav-link" href="minhasReservas.php?cpf=<?php echo $user_cpf;?>">Minhas reservas</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-danger" href="index.html">Logout</a>
+              <a class="btn btn-danger" href="../index.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -91,7 +91,7 @@
         <button type="button" class="btn btn-primary profileBtn"><a href="altNome.php?cpf=<?php echo $user_cpf;?>">Alterar Nome</a></button>
         <button type="button" class="btn btn-primary profileBtn"><a href="altEmail.php?cpf=<?php echo $user_cpf;?>">Alterar Email</a></button>
         <button type="button" class="btn btn-primary profileBtn"><a href="altSenha.php?cpf=<?php echo $user_cpf;?>">Alterar Senha</a></button>
-        <button type="button" class="btn btn-danger profileBtn" id="deleteBtn"><a href="../controller/cliente/deleteClienteController.php?cpf=<?php echo $user_cpf;?>">Apagar Conta</a></button>
+        <button type="button" class="btn btn-danger profileBtn" id="deleteBtn"><a href="../../controller/cliente/deleteClienteController.php?cpf=<?php echo $user_cpf;?>">Apagar Conta</a></button>
       </div>
     </div>
 

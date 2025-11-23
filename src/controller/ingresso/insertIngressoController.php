@@ -9,6 +9,6 @@
 
     if($bd->insertIngresso($user_cpf,$idTour,$diaIngresso) == 1){
         echo "reserva feita com sucesso!";
-        header("Location: ../../view/minhasReservas.php?cpf=$user_cpf");
+        header("Location: ../../view/loggedInPages/minhasReservas.php?cpf=$user_cpf");
     }
 ?> 

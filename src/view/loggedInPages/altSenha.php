@@ -18,7 +18,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Cadastro</title>
   </head>
   <body class="cadastro-bg">
@@ -48,7 +48,7 @@
                 <a class="nav-link" href="loggedInHome.html?cpf=<?php echo $user_cpf?>#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf?>">Quem Somos</a>
+                <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf?>">Quem Somos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf?>#pacotes">Pacotes</a>
@@ -67,14 +67,14 @@
 
     <main>
       <div class="form-box mx-auto">
-        <h2>Insira o novo nome:</h2>
-        <form method="post" action="../controller/cliente/updateNomeController.php?cpf=<?php echo $user_cpf?>">
+        <h2>Insira a nova Senha:</h2>
+        <form method="post" action="../controller/cliente/updateSenhaController.php?cpf=<?php echo $user_cpf?>">
           <div class="mb-3">
             <input
-              type="text"
-              name="novoNome"
+              type="password"
+              name="novaSenha"
               class="form-control"
-              placeholder="Insira seu nome"
+              placeholder="Insira sua nova senha"
               required
             />
           </div>

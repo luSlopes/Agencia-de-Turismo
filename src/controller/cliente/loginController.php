@@ -32,7 +32,7 @@
             $user_cpf = $user["id_cliente"];
             
             if($user_cpf == $cpf && password_verify($senha,$user["senha"])){
-                header("Location: ../../view/loggedInHome.php?cpf=$cpf");
+                header("Location: ../../view/loggedInPages/loggedInHome.php?cpf=$cpf");
             }
             else{
                 echo "<p>Nao foi possivel se conectar, verifique as informacoes e tente novamente</p>";

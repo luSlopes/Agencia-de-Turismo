@@ -18,7 +18,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Cadastro</title>
   </head>
   <body class="cadastro-bg">
@@ -48,7 +48,7 @@
                 <a class="nav-link" href="loggedInHome.html?cpf=<?php echo $user_cpf?>#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf?>">Quem Somos</a>
+                <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf?>">Quem Somos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf?>#pacotes">Pacotes</a>

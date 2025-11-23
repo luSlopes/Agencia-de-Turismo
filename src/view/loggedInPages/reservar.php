@@ -1,15 +1,15 @@
 <?php 
-  $user_cpf = $_GET['cpf'];
-  $idTour = $_GET['idTour'];
-  $diaIngresso = $_POST['date'];
+  $user_cpf = $_GET["cpf"];
+  $idTour = $_GET["idTour"];
 ?>
 
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rildax Tour - Agência de Turismo em Rio das Ostras</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -22,15 +22,15 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/pagamento.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <title>Pagamento</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/reserva.css">
   </head>
   <body>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">
+        <a class="navbar-brand fw-bold" href="loggedInHome.php?cpf=<?php echo $user_cpf?>">
           <i class="bi bi-water me-2"></i>Rildax Tour
         </a>
         <button
@@ -47,7 +47,7 @@
               <a class="nav-link" href="index.html#home?cpf=<?php echo $user_cpf;?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
+              <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#pacotes?cpf=<?php echo $user_cpf;?>">Pacotes</a>
@@ -55,34 +55,23 @@
             <li class="nav-item">
               <a class="nav-link" href="perfil.php?cpf=<?php echo $user_cpf;?>">Meu perfil</a>
             </li>
+            <li class="nav-item">
+              <a class="btn btn-danger" href="../index.html">Logout</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-
-    <form method="post" action="../controller/ingresso/insertIngressoController.php?cpf=<?php echo $user_cpf?>&idTour=<?php echo $idTour;?>&diaIngresso=<?php echo $diaIngresso;?>"> 
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Numero do cartao</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="16 digitos sem espaço">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">CVC</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ex: 123">
-      </div>
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Data de validade</label>
-        <input type="date" class="form-control" id="date">
-      </div>
-      <button type="submit" class="btn btn-success">Confirmar compra</button>
-    </form>
-
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <div class="container" id="calendar">
+        <form action="pagamento.php?cpf=<?php echo $user_cpf;?>&idTour=<?php echo $idTour;?>" method="post">
+            <p>Selecione a data para a reserva:</p>
+            <input type="date" name="date" id="date" class="calendar">
+            <div class="submitPagamento">
+            <button type="submit" class="btn btn-primary">ir para pagamento</button>
+            </div>
+        </form>
+    </div>
 
     <script>
       let dateTour = document.querySelector('#date');
@@ -90,6 +79,7 @@
       
       function verifyDate(){
         let date = new Date();
+        
 
         let dayNow = date.getDate();
         let monthNow = date.getMonth() + 1;
