@@ -44,18 +44,22 @@
         }
 
         public function updateNome($id,$nome){
+            try{
             $query = "update clientes set nome = :nome where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id",$id);
             $stmt->bindParam(":nome",$nome);
-            $stmt->bindParam(":email",$email);
-            $stmt->bindParam(":senha",$senha);
 
             $stmt->execute();
+            return 1;
+            }catch(PDOException $e){
+                echo "Nao foi possivel alterar as informacoes". $e->getMessage();
+            }
         }
 
         public function updateEmail($id,$email){
+            try{
             $query = "update clientes set email = :email, where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
@@ -65,9 +69,15 @@
             $stmt->bindParam(":senha",$senha);
 
             $stmt->execute();
+
+            return 1;
+            }catch(PDOException $e){
+                echo "". $e->getMessage();
+            }
         }
 
         public function updateSenha($id,$senha){
+            try{
             $query = "update clientes set senha = :senha where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
@@ -77,6 +87,10 @@
             $stmt->bindParam(":senha",$senha);
 
             $stmt->execute();
+            return 1;
+            }catch(PDOException $e){
+                echo "". $e->getMessage();
+            }
         }
 
         public function deleteCliente($id){

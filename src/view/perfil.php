@@ -68,7 +68,7 @@
     </nav>
 
     <div class="container profile">
-      <i class="fa-solid fa-user fa-8x icon" style="margin-top:25px"></i>
+      <i class="fa-solid fa-user fa-8x icon" style="margin-top:20px"></i>
       <div class="container info">
         <table class="table">
           <thead>
@@ -88,9 +88,9 @@
         </table>
       </div>
       <div class="alterar">
-        <button type="button" class="btn btn-primary"><a href="altNome.html">Alterar Nome</a></button>
-        <button type="button" class="btn btn-primary"><a href="altEmail.html">Alterar Email</a></button>
-        <button type="button" class="btn btn-primary"><a href="altSenha.html">Alterar Senha</a></button>
+        <button type="button" class="btn btn-primary"><a href="altNome.php?cpf=<?php echo $user_cpf;?>">Alterar Nome</a></button>
+        <button type="button" class="btn btn-primary"><a href="altEmail.php?cpf=<?php echo $user_cpf;?>">Alterar Email</a></button>
+        <button type="button" class="btn btn-primary"><a href="altSenha.php?cpf=<?php echo $user_cpf;?>">Alterar Senha</a></button>
       </div>
     </div>
 

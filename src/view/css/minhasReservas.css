@@ -1,23 +1,24 @@
 .reservas-section {
-    min-height: 100vh;
-    padding-top: 120px;
-    background: var(--light);
+  min-height: 100vh;
+  padding-top: 120px;
+  background: var(--light);
 }
 
 .reservas-card {
-    background: white;
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .table {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 150px;
 }
 
 .table th {
-    background: var(--primary);
-    color: white;
+  background: var(--primary);
+  color: white;
 }

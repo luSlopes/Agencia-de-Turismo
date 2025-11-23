@@ -25,7 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">
+        <a class="navbar-brand fw-bold" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>">
           <i class="bi bi-water me-2"></i>Rildax Tour
         </a>
         <button
@@ -65,7 +65,7 @@
     <div class="container title">
         <h1 class="titleFont">Minhas reservas</h1>
     </div>
-<div class="container info">
+    <div class="container info"> 
         <table class="table">
   <thead>
     <tr>
