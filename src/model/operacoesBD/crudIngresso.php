@@ -9,15 +9,20 @@
             $this->con = $c->conectar();
         }
 
-        public function insertIngresso($codigo, $id_usuario, $id_tour){
-            $query = "insert into ingressos (codigo, id_usuario, id_tour) values (:codigo,:id_usuario,:id_tour)";
+        public function insertIngresso($id_usuario, $id_tour){
+            try{
+                $query = "insert into ingressos (id_cliente, id_tour) values (:id_usuario,:id_tour)";
 
-            $stmt = $this->con->prepare($query);
-            $stmt->bindParam(":codigo", $codigo);
-            $stmt->bindParam(":id_usuario", $id_usuario);
-            $stmt->bindParam(":id_tour", $id_tour);
+                $stmt = $this->con->prepare($query);
+                $stmt->bindParam(":id_usuario", $id_usuario);
+                $stmt->bindParam(":id_tour", $id_tour);
 
-            $stmt->execute();
+                $stmt->execute();
+                return 1;
+            }catch(PDOException $e){
+                echo "Nao foi possivel realizar a reserva!";
+                echo "".$e->getMessage();
+            }
         }
 
         public function deleteIngresso($codigo){

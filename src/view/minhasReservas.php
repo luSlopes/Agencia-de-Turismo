@@ -19,7 +19,7 @@
     <title>Minhas reservas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/reservas.css">
+    <link rel="stylesheet" href="css/minhasReservas.css">
   </head>
   <body>
 
@@ -85,7 +85,7 @@
                 <tr>
                 <td>$ingressoId</td>
                 <td>$tourDia</td>
-                <td><a class='btn btn-danger' href='../controller/ingresso/deleteIngressoController.php?idIngresso=$ingressoId'>Cancelar</a></td>
+                <td><a class='btn btn-danger' href='../controller/ingresso/deleteIngressoController.php?idIngresso=$ingressoId&cpf=$user_cpf'>Cancelar</a></td>
                 </tr>
                 ";
         }

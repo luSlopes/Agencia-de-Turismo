@@ -3,9 +3,11 @@
 
     $bd = new CrudIngresso();
 
-    $id = $_POST["idIngresso"];
-    $idCliente = $_POST["id"];
-    $idTour = $_POST["idTour"];
+    $user_cpf = $_GET["cpf"];
+    $idTour = $_GET["idTour"];
 
-    $bd->insertIngresso($id,$idCliente,$idTour);
+    if($bd->insertIngresso($user_cpf,$idTour) == 1){
+        echo "reserva feita com sucesso!";
+        header("Location: ../../view/minhasReservas.php?cpf=$user_cpf");
+    }
 ?> 

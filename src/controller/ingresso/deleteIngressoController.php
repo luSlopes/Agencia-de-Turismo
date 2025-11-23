@@ -26,10 +26,11 @@
 
     if($bd->deleteIngresso($id) == 1){
         echo "<p class = 'success'>Reserva cancelada!</p>";
+        header("Location: ../../view/minhasReservas.php?cpf=$user_cpf");
     }else{
         echo "<p class = 'failed'>Nao foi possivel cancelar a reserva!</p>";
+        echo "<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
     }
-    echo "<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
 ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>

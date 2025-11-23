@@ -1,0 +1,20 @@
+p {
+  font-size: 30px;
+}
+
+input.calendar {
+  width: 200px;
+  margin-top: 10px;
+}
+
+div#calendar {
+  border: 2px solid;
+  border-radius: 20px;
+  margin-top: 200px;
+  width: 500px;
+  height: 200px;
+}
+
+div.submitPagamento {
+  margin-top: 30px;
+}

@@ -140,7 +140,7 @@
                   Passeio de um dia com transporte, guarda-sol e almoço incluso.
                 </p>
                 <p class="text-primary fw-bold">R$ 149,90 por pessoa</p>
-                <a href="cadastro.html" class="btn btn-outline-primary"
+                <a href="reservar.php?cpf=<?php echo $user_cpf;?>&idTour=1" class="btn btn-outline-primary"
                   >Reservar agora</a
                 >
               </div>
@@ -160,7 +160,7 @@
                   caipirinha.
                 </p>
                 <p class="text-primary fw-bold">R$ 189,90 por pessoa</p>
-                <a href="cadastro.html" class="btn btn-outline-primary"
+                <a href="reservar.php?cpf=<?php echo $user_cpf;?>&idTour=2" class="btn btn-outline-primary"
                   >Reservar agora</a
                 >
               </div>
@@ -179,7 +179,7 @@
                   Conheça os principais pontos turísticos de Rio das Ostras.
                 </p>
                 <p class="text-primary fw-bold">R$ 99,90 por pessoa</p>
-                <a href="cadastro.html" class="btn btn-outline-primary"
+                <a href="reservar.php?cpf=<?php echo $user_cpf;?>&idTour=3" class="btn btn-outline-primary"
                   >Reservar agora</a
                 >
               </div>
@@ -205,9 +205,6 @@
               </li>
               <li><a href="pacotes.html" class="text-white">Pacotes</a></li>
               <li><a href="cadastro.html" class="text-white">Cadastro</a></li>
-              <li>
-                <a href="consulta.html" class="text-white">Minhas Reservas</a>
-              </li>
             </ul>
           </div>
           <div class="col-md-4">
