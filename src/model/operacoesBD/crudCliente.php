@@ -60,13 +60,11 @@
 
         public function updateEmail($id,$email){
             try{
-            $query = "update clientes set email = :email, where id_cliente = :id";
+            $query = "update clientes set email = :email where id_cliente = :id";
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id",$id);
-            $stmt->bindParam(":nome",$nome);
             $stmt->bindParam(":email",$email);
-            $stmt->bindParam(":senha",$senha);
 
             $stmt->execute();
 
@@ -82,8 +80,6 @@
 
             $stmt = $this->con->prepare($query);
             $stmt->bindParam(":id",$id);
-            $stmt->bindParam(":nome",$nome);
-            $stmt->bindParam(":email",$email);
             $stmt->bindParam(":senha",$senha);
 
             $stmt->execute();

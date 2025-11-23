@@ -25,7 +25,6 @@
     }else{
         echo "<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
     }
-    
 ?>
 </body>
 </html>
