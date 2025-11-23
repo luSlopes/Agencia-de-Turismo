@@ -1,9 +1,9 @@
 <?php 
     
     class conexaoBD{
-        private $host ="localhost:3308";
+        private $host ="localhost:3306";
         private $user = "root";
-        private $bd = "agenciaTurismo";
+        private $bd = "agencia-turismo";
         private $senha = "";
         
         function conectar(){

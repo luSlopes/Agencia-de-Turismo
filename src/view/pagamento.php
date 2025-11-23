@@ -1,6 +1,7 @@
 <?php 
   $user_cpf = $_GET['cpf'];
   $idTour = $_GET['idTour'];
+  $diaIngresso = $_POST['date'];
 ?>
 
 
@@ -60,7 +61,7 @@
     </nav>
 
 
-    <form method="post" action="../controller/ingresso/insertIngressoController.php?cpf=<?php echo $user_cpf?>&idTour=<?php echo $idTour;?>"> 
+    <form method="post" action="../controller/ingresso/insertIngressoController.php?cpf=<?php echo $user_cpf?>&idTour=<?php echo $idTour;?>&diaIngresso=<?php echo $diaIngresso;?>"> 
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Numero do cartao</label>
         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="16 digitos sem espaço">

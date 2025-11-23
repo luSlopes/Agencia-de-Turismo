@@ -9,13 +9,14 @@
             $this->con = $c->conectar();
         }
 
-        public function insertIngresso($id_usuario, $id_tour){
+        public function insertIngresso($id_usuario, $id_tour,$diaIngresso){
             try{
-                $query = "insert into ingressos (id_cliente, id_tour) values (:id_usuario,:id_tour)";
+                $query = "insert into ingressos (id_cliente, id_tour, dia) values (:id_usuario,:id_tour, :diaIngresso)";
 
                 $stmt = $this->con->prepare($query);
                 $stmt->bindParam(":id_usuario", $id_usuario);
                 $stmt->bindParam(":id_tour", $id_tour);
+                $stmt->bindParam(":diaIngresso", $diaIngresso);
 
                 $stmt->execute();
                 return 1;
