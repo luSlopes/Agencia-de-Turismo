@@ -25,6 +25,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/perfil.css" >
     <title>Meu perfil</title>
   </head>
   <body>
@@ -67,7 +68,7 @@
     </nav>
 
     <div class="container profile">
-      <i class="fa-solid fa-user fa-8x icon"></i>
+      <i class="fa-solid fa-user fa-8x icon" style="margin-top:25px"></i>
       <div class="container info">
         <table class="table">
           <thead>
