@@ -1,6 +1,6 @@
 <?php
     require_once"../model/operacoesBD/crudIngresso.php";
-    require_once"../model/operacoesBD/crudTour.php";
+    require_once"../model/operacoesBD/readTour.php";
     $bdIngresso = new crudIngresso();
     $bdTour = new crudTour();
     
@@ -71,20 +71,26 @@
     <tr>
       <th scope="col">Codigo</th>
       <th scope="col">Dia</th>
+      <th scope="col">Modalidade</th>
       <th></th>
     </tr>
     </thead>
         <tbody>
     <?php 
         foreach($ingressos as $ingressoInfo){
-            $ingressoId = $ingressoInfo['codigo'];
+            $ingressoId = $ingressoInfo['codigo']; // codigo do ingresso
+            $ingressoData = $ingressoInfo['dia']; // data do ingresso
+
             $tour_id = $ingressoInfo['id_tour'];
             $tourInfo = $bdTour->readTour($tour_id);
-            $tourDia = $tourInfo['dia'];
+            $tourName = $tourInfo['nome']; //modalidade da tour
+
+           
             echo "  
                 <tr>
                 <td>$ingressoId</td>
-                <td>$tourDia</td>
+                <td>$ingressoData</td>
+                <td>$tourName</td>
                 <td><a class='btn btn-danger' href='../controller/ingresso/deleteIngressoController.php?idIngresso=$ingressoId&cpf=$user_cpf'>Cancelar</a></td>
                 </tr>
                 ";
