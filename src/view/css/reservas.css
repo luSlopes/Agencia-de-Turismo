@@ -1,22 +1,23 @@
-div.info {
-  width: 400px;
-  margin-top: 30px;
-  margin-left: 530px;
-  border: 2px solid;
-  border-radius: 20px;
+.reservas-section {
+    min-height: 100vh;
+    padding-top: 120px;
+    background: var(--light);
 }
 
-div.title {
-  margin-top: 100px;
-  width: 400px;
+.reservas-card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-h1.titleFont {
-  font-family: sans-serif;
-  color: black;
-  font-size: 40px;
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-btn {
-  margin-left: 50px;
+.table th {
+    background: var(--primary);
+    color: white;
 }
