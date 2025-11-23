@@ -90,12 +90,17 @@
         }
 
         public function deleteCliente($id){
-            $query = "delete from clientes where id_cliente = :id";
+            try{
+                $query = "delete from clientes where id_cliente = :id";
 
-            $stmt = $this->con->prepare($query);
-            $stmt->bindParam(":id", $id);
+                $stmt = $this->con->prepare($query);
+                $stmt->bindParam(":id", $id);
 
-            $stmt->execute();
+                $stmt->execute();
+                return 1;
+            }catch(PDOException $e){
+                echo "". $e->getMessage();
+            }
         }
     }
 ?>

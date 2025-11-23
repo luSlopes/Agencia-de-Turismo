@@ -87,10 +87,11 @@
           </tbody>
         </table>
       </div>
-      <div class="alterar">
-        <button type="button" class="btn btn-primary"><a href="altNome.php?cpf=<?php echo $user_cpf;?>">Alterar Nome</a></button>
-        <button type="button" class="btn btn-primary"><a href="altEmail.php?cpf=<?php echo $user_cpf;?>">Alterar Email</a></button>
-        <button type="button" class="btn btn-primary"><a href="altSenha.php?cpf=<?php echo $user_cpf;?>">Alterar Senha</a></button>
+      <div class="alterar container">
+        <button type="button" class="btn btn-primary profileBtn"><a href="altNome.php?cpf=<?php echo $user_cpf;?>">Alterar Nome</a></button>
+        <button type="button" class="btn btn-primary profileBtn"><a href="altEmail.php?cpf=<?php echo $user_cpf;?>">Alterar Email</a></button>
+        <button type="button" class="btn btn-primary profileBtn"><a href="altSenha.php?cpf=<?php echo $user_cpf;?>">Alterar Senha</a></button>
+        <button type="button" class="btn btn-danger profileBtn" id="deleteBtn"><a href="../controller/cliente/deleteClienteController.php?cpf=<?php echo $user_cpf;?>">Apagar Conta</a></button>
       </div>
     </div>
 
@@ -103,5 +104,18 @@
       src="https://kit.fontawesome.com/de2557c88b.js"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      //Script para confirmar o apagamento da conta
+      const DELETE = document.getElementById('deleteBtn')
+      DELETE.addEventListener('click',confirma)
+
+      function confirma(event){
+        let resultado = window.confirm("Tem certeza de que deseja excluir a conta?");
+        
+        if(resultado == false)
+          event.preventDefault();
+      }
+    </script>
   </body>
 </html>
