@@ -1,9 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quem somos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quem Somos - Rildax Tour</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar padrão -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-water me-2"></i>Rildax Tour
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="quem-somos.html">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#pacotes">Pacotes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" style="height: 50vh">
+      <div
+        class="container h-100 d-flex align-items-center justify-content-center"
+      >
+        <h1 class="display-2 fw-bold text-center">Quem Somos</h1>
+      </div>
+    </section>
+
+    <!-- Conteúdo -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="text-center mb-5">
+              <h2 class="mb-4">Rildax Tour – Turismo em Rio das Ostras</h2>
+              <p class="lead">
+                Somos uma agência de turismo apaixonada por mostrar o melhor de
+                Rio das Ostras e região: praias paradisíacas, passeios de
+                escuna, city tours e experiências inesquecíveis.
+              </p>
+            </div>
+
+            <div class="row g-5 mt-4">
+              <div class="col-md-6">
+                <div class="text-center">
+                  <i class="bi bi-heart-fill text-primary fs-1 mb-3"></i>
+                  <h4>Missão</h4>
+                  <p>
+                    Proporcionar experiências autênticas e seguras, valorizando
+                    a cultura e a natureza local.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="text-center">
+                  <i class="bi bi-eye-fill text-success fs-1 mb-3"></i>
+                  <h4>Visão</h4>
+                  <p>
+                    Ser referência em turismo sustentável na Região dos Lagos
+                    até 20099.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="text-center my-5">Equipe do Projeto</h2>
+            <div class="row g-5">
+              <!-- Pessoa 1 -->
+              <div class="col-md-6">
+                <div class="text-center">
+                  <a
+                    href="https://www.youtube.com/watch?v=CSvFpBOe8eY&list=RDCSvFpBOe8eY&rco=1"
+                  >
+                    <img
+                      src="imagens/lucas.jpg"
+                      alt="lululopes"
+                      class="rounded-circle mb-3"
+                      width="180"
+                      height="180"
+                    />
+                  </a>
+                  <h4>Lucas Lopes</h4>
+                  <p>
+                    <strong>Responsável por:</strong><br />
+                    Back-end
+                  </p>
+                </div>
+              </div>
+
+              <!-- Pessoa 2 -->
+              <div class="col-md-6">
+                <div class="text-center">
+                  <a
+                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+                  >
+                    <img
+                      src="imagens/enzo.jpg"
+                      alt="endomagaude"
+                      class="rounded-circle mb-3"
+                      width="180"
+                      height="180"
+                    />
+                  </a>
+                  <h4>Enzo Magaldi</h4>
+                  <p>
+                    <strong>Responsável por:</strong><br />
+                    Front-end
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sobre o projeto acadêmico -->
+            <div class="mt-5 p-5 bg-light rounded shadow">
+              <h3 class="text-center mb-4">Sobre este Projeto Acadêmico</h3>
+              <p class="text-center lead">
+                Sistema web desenvolvido como trabalho da disciplina
+                <strong>Desenvolvimento Web</strong><br />
+                Universidade Federal Fluminense | Campus Rio das Ostras | 2025.2
+              </p>
+              <p class="text-center">
+                Tecnologias: HTML, CSS, Bootstrap 5, JavaScript, PHP e MySQL
+              </p>
+              <div class="text-center mt-4">
+                <a
+                  href="https://github.com/seu-usuario/rildaxtour"
+                  target="_blank"
+                  class="btn btn-dark btn-lg"
+                >
+                  <i class="bi bi-github"></i> Ver repositório completo no
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer padrão -->
+    <footer class="py-5 text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5><i class="bi bi-water"></i> Rildax Tour</h5>
+            <p>Seu parceiro de turismo em Rio das Ostras.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Links rápidos</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white">Home</a></li>
+              <li>
+                <a href="quem-somos.html" class="text-white">Quem Somos</a>
+              </li>
+              <li><a href="login.html" class="text-white">Login</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Contato</h5>
+            <p>
+              <i class="bi bi-whatsapp"></i> (22) 99777-1234<br />
+              <i class="bi bi-envelope"></i> contato@rildaxtour.com.br
+            </p>
+          </div>
+        </div>
+        <hr />
+        <p class="text-center mb-0 small">
+          © 2025 Rildax Tour – Trabalho acadêmico da disciplina Desenvolvimento
+          Web – UFF
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
