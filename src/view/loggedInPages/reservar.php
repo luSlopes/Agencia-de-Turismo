@@ -47,7 +47,7 @@
               <a class="nav-link" href="index.html#home?cpf=<?php echo $user_cpf;?>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../quem-somos.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
+              <a class="nav-link" href="quem-somosLoggedIn.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html#pacotes?cpf=<?php echo $user_cpf;?>">Pacotes</a>
