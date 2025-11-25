@@ -21,9 +21,9 @@
         $user_cpf = $_GET["cpf"];
 
         if($bd->updateEmail($user_cpf,$novoEmail)){
-            header("Location: ../../view/perfil.php?cpf=$user_cpf");
+            header("Location: ../../view/loggedInPages/perfil.php?cpf=$user_cpf");
         }else{
-            echo "<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
+            echo "<a href='../../view/loggedInPages/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
         }
 ?>
 </body>

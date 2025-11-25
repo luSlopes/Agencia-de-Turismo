@@ -71,7 +71,7 @@
         <form method="post" action="../../controller/cliente/updateEmailController.php?cpf=<?php echo $user_cpf?>">
           <div class="mb-3">
             <input
-              type="text"
+              type="email"
               name="novoEmail"
               class="form-control"
               placeholder="Insira seu email"

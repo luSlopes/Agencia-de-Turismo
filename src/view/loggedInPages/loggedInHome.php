@@ -48,7 +48,7 @@
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#home?">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="quem-somosLoggedIn.html?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
+              <a class="nav-link" href="quem-somosLoggedIn.php?cpf=<?php echo $user_cpf;?>">Quem Somos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
@@ -76,7 +76,7 @@
           A sua agência de turismo especializada nas melhores praias, passeios e
           experiências do litoral fluminense
         </p>
-        <a href="pacotes.html" class="btn btn-lg btn-light fw-bold">
+        <a href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes" class="btn btn-lg btn-light fw-bold">
           <i class="bi bi-search"></i> Conheça nossos pacotes
         </a>
       </div>
@@ -201,10 +201,10 @@
             <h5>Links rápidos</h5>
             <ul class="list-unstyled">
               <li>
-                <a href="quem-somos.html" class="text-white">Quem Somos</a>
+                <a href="quem-somosLoggedIn.php?cpf=<?php echo $user_cpf;?>" class="text-white">Quem Somos</a>
               </li>
-              <li><a href="pacotes.html" class="text-white">Pacotes</a></li>
-              <li><a href="cadastro.html" class="text-white">Cadastro</a></li>
+              <li><a href="loggedInHome.php?cpf=<?php echo $user_cpf;?>" class="text-white">Pacotes</a></li>
+              <li><a href="../cadastro.html" class="text-white">Cadastro</a></li>
             </ul>
           </div>
           <div class="col-md-4">

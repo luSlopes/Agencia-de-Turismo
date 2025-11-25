@@ -29,10 +29,10 @@
     $bd = new crudCliente();
 
     if($bd->insertCliente($id, $nome, $email, $senha)==1){
-        echo "<p>Cadastro realizado com sucesso!</p><br>";  
+        header("Location: ../../../index.html");  
+    }else{
+        echo 'Nao foi possivel realizar o cadastro! Verifique as informaçoes e tente novamente <a href="../../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
     }
-
-    echo '<a href="../../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
 ?>
 </body>
 </html>

@@ -26,7 +26,7 @@
                 $stmt->execute();
                 return 1;
             }catch(PDOException $e){
-                echo "Nao foi possivel inserir os dados". $e->getMessage();
+                echo "Nao foi possivel inserir os dados";
             }
         }
 
@@ -54,7 +54,7 @@
             $stmt->execute();
             return 1;
             }catch(PDOException $e){
-                echo "Nao foi possivel alterar as informacoes". $e->getMessage();
+                echo "Nao foi possivel alterar as informacoes";
             }
         }
 
@@ -70,7 +70,7 @@
 
             return 1;
             }catch(PDOException $e){
-                echo "". $e->getMessage();
+                echo "Nao foi possivel alterar as informacoes";
             }
         }
 
@@ -85,7 +85,7 @@
             $stmt->execute();
             return 1;
             }catch(PDOException $e){
-                echo "". $e->getMessage();
+                echo "Nao foi possivel alterar as informacoes";
             }
         }
 
@@ -99,7 +99,7 @@
                 $stmt->execute();
                 return 1;
             }catch(PDOException $e){
-                echo "". $e->getMessage();
+                echo "Nao foi possivel alterar as informacoes";
             }
         }
     }

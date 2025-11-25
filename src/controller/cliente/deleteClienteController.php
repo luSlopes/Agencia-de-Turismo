@@ -20,7 +20,7 @@
     $user_cpf = $_GET["cpf"];
 
     if($bd->deleteCliente($user_cpf)==1)
-        header("Location: ../../view/index.html");
+        header("Location: ../../../index.html");
     else
         echo "<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
 ?>

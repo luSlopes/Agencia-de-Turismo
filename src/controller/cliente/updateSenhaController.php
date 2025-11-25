@@ -21,7 +21,7 @@
         $user_cpf = $_GET["cpf"];
 
         if($bd->updateSenha($user_cpf,$novaSenha)){
-            header("Location: ../../view/perfil.php?cpf=$user_cpf");
+            header("Location: ../../view/loggedInPages/perfil.php?cpf=$user_cpf");
         }else{
             echo"<a href='../../view/loggedInHome.php?cpf=$user_cpf' class='btn btn-info'>Voltar a pagina inicial</a>";
         }

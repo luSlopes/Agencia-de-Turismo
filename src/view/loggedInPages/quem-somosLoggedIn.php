@@ -1,3 +1,9 @@
+<?php 
+  $user_cpf = $_GET['cpf'];
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
@@ -14,13 +20,13 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- Navbar padrão -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="../../../index.html">
+        <a class="navbar-brand fw-bold" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>">
           <i class="bi bi-water me-2"></i>Rildax Tour
         </a>
         <button
@@ -33,22 +39,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="../../../index.html">Home</a>
+              <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="">Quem Somos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../../index.html#pacotes">Pacotes</a>
+              <a class="nav-link" href="loggedInHome.php?cpf=<?php echo $user_cpf;?>#pacotes">Pacotes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="perfil.php?cpf=<?php echo $user_cpf;?>"
                 >Meu perfil</a
               >
+            <li class="nav-item">
+              <a class="nav-link" href="minhasReservas.php?cpf=<?php echo $user_cpf;?>">Minhas reservas</a>
+            </li>
             </li>
             <li class="nav-item">
-              <a class="btn btn-danger" href="../index.html">Logout</a>
+              <a class="btn btn-danger" href="../../../index.html">Logout</a>
             </li>
+
           </ul>
         </div>
       </div>
@@ -106,7 +116,7 @@
                   <a
                     href="https://www.youtube.com/watch?v=CSvFpBOe8eY&list=RDCSvFpBOe8eY&rco=1">
                     <img
-                      src="imagens/lucas.jpg"
+                      src="../imagens/lucas.jpg"
                       alt="lululopes"
                       class="rounded-circle mb-3"
                       width="180"
@@ -126,7 +136,7 @@
                   <a
                     href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1">
                     <img
-                      src="imagens/enzo.jpg"
+                      src="../imagens/enzo.jpg"
                       alt="endomagaude"
                       class="rounded-circle mb-3"
                       width="180"
@@ -178,11 +188,12 @@
           <div class="col-md-4">
             <h5>Links rápidos</h5>
             <ul class="list-unstyled">
-              <li><a href="index.html" class="text-white">Home</a></li>
+              <li><a href="loggedInHome.php?cpf=<?php echo $user_cpf;?>" class="text-white">Home</a></li>
               <li>
-                <a href="quem-somos.html" class="text-white">Quem Somos</a>
+                <a href="" class="text-white"
+                  >Quem Somos</a
+                >
               </li>
-              <li><a href="login.html" class="text-white">Login</a></li>
             </ul>
           </div>
           <div class="col-md-4">
