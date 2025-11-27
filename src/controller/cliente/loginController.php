@@ -32,16 +32,14 @@
             $user_cpf = $user["id_cliente"];
             
             if($user_cpf == $cpf && password_verify($senha,$user["senha"])){
+                header("Location: ../../view/loggedInPages/loggedInHome.php?cpf=$user_cpf");
+            }
+            else{
                 echo '<script>
                         alert("Login ou senha incorretos! Verifique e tente novamente.");
                         window.location.href = "../../view/login.html";
                       </script>';
             }
-            else{
-                echo "<p>Nao foi possivel se conectar, verifique as informacoes e tente novamente</p>";
-            }
-            echo '<a href="../../view/index.html" class="btn btn-info">Voltar a pagina inicial</button>';
-            echo '<a href="../../view/login.html" class="btn btn-primary">Voltar a tela de login</button>';
         ?>
     </body>
 
